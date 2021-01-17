@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.div-CurrentBalance{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.span-currentBalance{
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+.div-IncomeExpense{
+  display: flex;
+}
+.income{
+  width: 200px;
+  height: 70px;
+  box-shadow: 2px 2px 2px 2px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.expense{
+  width: 200px;
+  height: 70px;
+  box-shadow: 2px 2px 2px 2px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.income span{
+  color: green;
+}
+.expense span{
+  color: red;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+li{
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 2px 2px 2px 2px grey !important;
+}
+button{
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+li:hover button {
+  opacity: 1;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 5px;
+  border-width: 1;
+  border-color: greenyellow;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+input:focus{
+  outline: none !important;
+  border-width: 1 !important;
+  border-color:red !important;
+
+}
+form button {
+  padding: 5px !important;
+   color: 'white' !important;
+    background-color: 'blue' !important;
+}
+.submit-btn{
+  background-color: rgb(101, 101, 252) !important;
+  color: white !important;
+  padding: 10px;
 }
